@@ -1,0 +1,26 @@
+/* 8px 10px 12px 16px 20px 24px 32px 40px 48px 56px 64px 72px 80px */
+
+/* xxs=460, xs=575, sm=767, md=991 or 1024, lg=1199, xl=1366 */
+
+.content-container {
+    max-width: 1142px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.img-cover {
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.img-contain {
+    object-fit: contain;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+
+

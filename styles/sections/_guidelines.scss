@@ -1,0 +1,57 @@
+.guidelines {
+    background-color: $grey-dark;
+
+    &__container {
+        min-height: 337px;
+    }
+
+    &__list {
+        min-height: 337px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+
+        &-item {
+
+            width: 216px;
+    
+            svg {
+                height: 96px;
+                width: 96px;
+                padding: 18px;
+                background-color: $grey-dark;
+            }
+            
+            h2 {
+                font-size: 36px;
+                line-height: 48px;
+                font-family: 'Aleo', sans-serif;
+                transition: font-size 0.5s ease;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: $breakpoint-down-sm){
+
+        &__list {
+            flex-direction: column;
+            padding: 24px 0;
+
+            &-item {
+                margin-bottom: 10px;
+                svg {
+                    height: 78px;
+                    width: 78px;
+                    padding: 14px;
+                }
+                
+                h2 {
+                    font-size: 20px;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}

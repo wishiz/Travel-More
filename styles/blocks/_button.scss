@@ -1,0 +1,146 @@
+@import "./../base/_mixins";
+
+.button {
+	@include center;
+	transition: background-color 0.2s ease, font-size 0.2s ease;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $white;
+	font-family: 'Aleo';
+
+
+	&--fluid {
+		width: 100%;
+	}
+
+	&--min-content {
+		width: min-content;
+	}
+
+	&--size-md {
+		min-height: 60px;
+		width: 150px;
+	}
+
+	&--size-lg {
+		min-height: 60px;
+		width: 225px;
+		font-size: 16px;
+	}
+
+	&--blue {
+		background-color: $blue;
+		color: $white;
+		transition: background-color 0.5s ease;
+
+		&:hover {
+			background-color: $blue-dark;
+		}
+	}
+
+	@media screen and (max-width: $breakpoint-down-xs) {
+		width: 100%;
+	}
+}
+
+button[type=submit] {
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 1px solid $white;
+
+	span {
+		@include center;
+		margin-right: 16px ;
+	}
+
+	svg {
+		font-size: 20px;
+	}
+}
+
+// Scroll button
+
+.scroll-btn {
+	color: $white;
+	margin: 0 auto;
+	position: relative;
+	letter-spacing: 0.2em;
+
+	&:hover {
+		text-decoration: none;
+		color: $white;
+	}
+
+	&:after {
+		content: "";
+		border: solid $white 2px;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		position: absolute;
+		bottom: -17px;
+		left: 40%
+	}
+}
+
+// Hamburger button
+
+.menu-btn {
+        background-color: transparent;
+        position: relative;
+        display: block;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+        border: 0;
+        height: 24px;
+        width: 24px;
+
+        p {
+            background-color: #ffffff;
+            transition: 0.4s ease;
+            transform: rotate(0deg);
+            position: absolute;
+            display: block;
+            opacity: 1;
+            height: 3px;
+            width: 100%;
+            border-radius: 20%;
+
+            &:nth-of-type(1) {
+                left: 0;
+	            top: 0;
+            }
+
+            &:nth-of-type(2) {
+                right: 0;
+                top: 8px;
+            }
+
+            &:nth-of-type(3) {
+                left: 0;
+                top: 16px;
+            }
+        
+        }
+
+        &:hover p:nth-of-type(1) {
+            transform: rotate(135deg);
+            top: 10px;
+        }
+
+        &:hover p:nth-of-type(2) {
+            opacity: 0;
+            right: 26px;
+        }
+
+        &:hover p:nth-of-type(3) {
+            transform: rotate(-135deg);
+            top: 10px;
+        }
+    }
